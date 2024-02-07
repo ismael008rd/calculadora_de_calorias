@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculando calorias</title>
-    <link rel="stylesheet" href="stilo/style.css" />
+    <link rel="stylesheet" href="estilo/style.css" />
   </head>
   <body>
     <div class="container">
@@ -24,15 +24,15 @@
 
           <div class="form-group">
             <label for="age">Sua idade</label>
-            <input type="number" id="age" />
+            <input type="number" id="age" required/>
           </div>
           <div class="form-group">
             <label for="weight">Seu peso</label>
-            <input type="number" id="weight" />
+            <input type="number" id="weight" required/>
           </div>
           <div class="form-group">
             <label for="height">Sua altura</label>
-            <input type="text" id="height" pattern="\d+(?:[.,]\d{1,2})?" title="Altura inválida. Por favor, insira um valor válido." placeholder="Altura (em metros)"/>
+            <input type="text" id="height" pattern="\d+(?:[.,]\d{1,2})?" required ="Altura (em metros)"/>
           </div>
 
           <div class="form-group">
@@ -52,7 +52,7 @@
         </form>
 
         <div class="result-content">
-          <h2>Aqui está o resultado:</h2>
+        
           <div class="result-content">
           
           </div>

@@ -1,46 +1,43 @@
+const form = document.querySelector("#form");
 
-const form = document.querySelector('#form')
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log("submitado");
 
-form.addEventListener('submit',(event)=>{
-    event.preventDefault()
-   console.log('submitado')
+  
+
+  verificarCalori();
+});
+
+function verificarCalori() {
+  const idade = getInputNumberValue("age");
+  const peso = getInputNumberValue("weight");
+  const height=document.querySelector("#height").value;
+
+  const altura = height.replace(/,/g, ".")
+
+  console.log(altura)
+
+  const gender = getSelectValue("gender");
+  const activeLevel = getSelectValue("activity_level");
 
   
 
-   const idade = getInputNumberValue('age')
-   const peso = getInputNumberValue('weight')
-   const altura =Number(document.querySelector('#height').value*100)
+  const tmb = Math.round(
+    gender === "female"
+      ? 655 + 9.6 * peso + 1.8 * altura - 4.7 * idade
+      : 65 + 13.7 * peso + 5 * altura - 6.8 * idade
+  );
 
-  
-   const gender = getSelectValue('gender')
-   const activeLevel = getSelectValue("activity_level")
-   
-   console.log(altura)
-     
-  
+  console.log(tmb);
 
+  const maintenance = Math.round(tmb * Number(activeLevel));
+  const loseWeight = maintenance - 450;
+  const gainWeight = maintenance + 450;
 
-   
-
-   
-   console.log(gender)
-
-   console.log( typeof idade)
-   console.log(peso)
-   console.log(altura)
-
-   const tmb= Math.round(
-    gender==='female'
-    ?(655+(9.6 *peso)+(1.8*altura)-(4.7*idade)):(65+(13.7 *peso)+(5*altura)-(6.8*idade))
-   )
-
-
-   const maintenance = Math.round(tmb* Number( activeLevel))
-   const loseWeight= maintenance-450
-   const gainWeight= maintenance+450
-
-   console.log(maintenance)
-   const layout = `
+  console.log(maintenance);
+  const layout = `
+  <h2>Aqui está o resultado:</h2>
    <ul>
    <li>Seu metabolismo é de <strong>${tmb}calorias</strong></li>
    <li>
@@ -56,17 +53,17 @@ form.addEventListener('submit',(event)=>{
      <strong>${gainWeight} calorias</strong>
    </li>
    </ul>
-   `
+   `;
 
-   const result = document.querySelector('.result-content')
-   result.innerHTML=layout
-})
+  const result = document.querySelector(".result-content");
+  result.innerHTML = layout;
+}
 
-function getSelectValue(id){
-    const select = document.getElementById(id)
-      return select.options[select.selectedIndex].value
-   }
+function getSelectValue(id) {
+  const select = document.getElementById(id);
+  return select.options[select.selectedIndex].value;
+}
 
-   function getInputNumberValue(id){
-    return Number(document.getElementById(id).value)
-   }
+function getInputNumberValue(id) {
+  return Number(document.getElementById(id).value);
+}
