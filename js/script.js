@@ -4,7 +4,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log("submitado");
 
-  
+
 
   verificarCalori();
 });
@@ -37,25 +37,27 @@ function verificarCalori() {
 
   console.log(maintenance);
   const layout = `
+  <div class="result-content">
   <h2>Aqui está o resultado:</h2>
-   <ul>
-   <li>Seu metabolismo é de <strong>${tmb}calorias</strong></li>
-   <li>
-     Para manter o seu peso precisa consumir em média
-     <strong>${maintenance} calorias</strong>
-   </li>
-   <li>
-     Para peder peso você precisa consumir em média
-     <strong>${loseWeight} calorias</strong>
-   </li>
-   <li>
-     Para ganhar peso você precisa em média
-     <strong>${gainWeight} calorias</strong>
-   </li>
-   </ul>
+  <ul>
+  <li>Seu metabolismo é de <strong>${tmb}calorias</strong></li>
+  <li>
+    Para manter o seu peso precisa consumir em média
+    <strong>${maintenance} calorias</strong>
+  </li>
+  <li>
+    Para peder peso você precisa consumir em média
+    <strong>${loseWeight} calorias</strong>
+  </li>
+  <li>
+    Para ganhar peso você precisa em média
+    <strong>${gainWeight} calorias</strong>
+  </li>
+  </ul>
+</div>
    `;
 
-  const result = document.querySelector(".result-content");
+  const result = document.querySelector(".result");
   result.innerHTML = layout;
 }
 
