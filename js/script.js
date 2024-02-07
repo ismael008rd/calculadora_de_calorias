@@ -5,11 +5,22 @@ form.addEventListener('submit',(event)=>{
     event.preventDefault()
    console.log('submitado')
 
+  
+
    const idade = getInputNumberValue('age')
    const peso = getInputNumberValue('weight')
-   const altura =getInputNumberValue('height')
+   const altura =Number(document.querySelector('#height').value*100)
+
+  
    const gender = getSelectValue('gender')
    const activeLevel = getSelectValue("activity_level")
+   
+   console.log(altura)
+     
+  
+
+
+   
 
    
    console.log(gender)
