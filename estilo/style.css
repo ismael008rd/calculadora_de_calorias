@@ -8,8 +8,9 @@
 }
 
 .container{
-  height: 100vh;
-  background: rgb(40, 40, 40);
+  height:100vh;
+  width: 100%;
+  background: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +24,7 @@
   max-width: 1200px;
   width: 100%;
   height: auto;
-  padding: 1.2em 0px;
+  padding: 0px;
 }
 
 header h1{
@@ -32,8 +33,9 @@ header h1{
 }
 
 form {
-    width: 20em;
+    width: 100%;
     max-width: 500px;
+    padding: 15px;
     margin: 0 auto;
   }
   
@@ -46,6 +48,7 @@ form {
 
 input {
     border: none;
+    border-radius: 10px;
     outline: none;
     color: white;
     width: 100%;
@@ -63,14 +66,21 @@ input:focus{
   color: rgb(254, 197, 73);
   font-size: .8em;
 }
+.result{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 
 .result-content{
-  background-color: rgb(69, 64, 64);
+  background-color: rgb(24, 6, 6);
   text-align: justify;
  
   margin-top: 1em;
-  width:20em;
-  padding: 10px 15px;
+  
+  padding: 10px 10px;
 }
 
 strong{
@@ -91,6 +101,7 @@ ul>li{
 select{
   font-family: 'Poppins', sans-serif;
   appearance: none;
+  border-radius: 6px;
   width: 100%;
   color: white;
   background-color: rgb(62, 62, 62);
