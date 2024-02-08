@@ -41,6 +41,7 @@ form {
   
   label {
     display: block;
+    padding: 10px;
     color: white;
     margin-bottom: 8px;
     font-family: 'Poppins', sans-serif;
@@ -49,17 +50,18 @@ form {
 input {
     border: none;
     border-radius: 10px;
+    font-size: 1.3em;
     outline: none;
     color: white;
     width: 100%;
-    padding: 8px;
-    background-color: rgb(234, 175, 14);
+    padding: 12px;
+    background-color: rgb(206, 150, 8);
     transition: border-color 0.3s ease-in-out;
   }
 
 
 input:focus{
-    border: 2px solid orange;
+    border: 3px solid rgb(30, 255, 0);
 }
 
 ::placeholder{
@@ -101,12 +103,13 @@ ul>li{
 select{
   font-family: 'Poppins', sans-serif;
   appearance: none;
+  text-transform: uppercase;
   border-radius: 6px;
   width: 100%;
   color: white;
-  background-color: rgb(62, 62, 62);
-  padding: 8px;
-  border: 1px solid gray;
+  background-color: rgb(22, 18, 15);
+  padding: 12px;
+  
   outline: none;
 }
 select:focus{
@@ -117,14 +120,15 @@ button{
   border: none;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
+  border-radius: 5px;
   font-size: .9em;
   text-transform: uppercase;
   color: white;
   margin-top: 1.5em;
   width: 100%;
   padding: 1em;
-  background-color: rgb(236, 140, 5);
-  transition: all .4s;
+  background-color: rgb(255, 74, 14);
+  transition: all .2s;
 }
 
 
@@ -137,7 +141,7 @@ button:active{
   transform: scale(.98);
   cursor: pointer;
  
-  box-shadow: 2px 3px 0px 1px rgb(255, 146, 45);
+  box-shadow: 2px 3px 0px 1px rgb(248, 121, 2);
   
 }
 
