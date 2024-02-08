@@ -3,9 +3,11 @@
 
 *{
   margin: 0;
+  
   padding: 0;
   box-sizing: border-box;
 }
+
 
 .container{
   height:100vh;
@@ -23,17 +25,18 @@
   align-items: center;
   max-width: 1200px;
   width: 100%;
-  height: auto;
+  
   padding: 0px;
 }
 
 header h1{
   color: white;
+  padding-top: 2em;
   font-family: 'Poppins', sans-serif;
 }
 
 form {
-    width: 100%;
+    width: 80%;
     max-width: 500px;
     padding: 15px;
     margin: 0 auto;
@@ -70,8 +73,11 @@ input:focus{
 }
 .result{
   width: 100%;
+  background-color:black;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
 }
@@ -80,8 +86,6 @@ input:focus{
   background-color: rgb(24, 6, 6);
   text-align: justify;
  
-  margin-top: 1em;
-  
   padding: 10px 10px;
 }
 
